@@ -6,7 +6,7 @@ Each print must be asynchronous call console.log function with a 50ms delay betw
 */
 
 (function() {
-	"use strict;"
+	"use strict";
 
 	var out, val,
 		delay = 50;
@@ -15,11 +15,11 @@ Each print must be asynchronous call console.log function with a 50ms delay betw
 		out = "";
 
 		if (i % 3 === 0) {
-			out += "Miss"
+			out += "Miss";
 		}
 
 		if (i % 5 === 0) {
-			out += "Kiss"
+			out += "Kiss";
 		}
 
 		val = out || i;
