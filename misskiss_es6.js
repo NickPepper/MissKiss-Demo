@@ -6,27 +6,15 @@ Each print must be asynchronous call console.log function with a 50ms delay betw
 */
 
 "use strict";
-(function() {
-	var out, val,
-		delay = 50;
+(() => {
+	let out, val;
+	const delay = 50;
 
-	for(var i = 1; i < 101; i++) {
+	for(let i = 1; i < 101; i++) {
 		out = "";
-
-		if (i % 3 === 0) {
-			out += "Miss";
-		}
-
-		if (i % 5 === 0) {
-			out += "Kiss";
-		}
-
+		if (i % 3 === 0) out += "Miss";
+		if (i % 5 === 0) out += "Kiss";
 		val = out || i;
-
-		(function(i, val) {
-			setTimeout(function() {
-				console.log(val);
-			}, i * delay);
-		})(i, val);
+		((i, val) => setTimeout(() => console.log(val), i * delay))(i, val);
 	}
 })();
